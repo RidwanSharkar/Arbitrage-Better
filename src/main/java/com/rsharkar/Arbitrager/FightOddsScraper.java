@@ -3,9 +3,12 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
+
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class FightOddsScraper {
@@ -16,19 +19,23 @@ public class FightOddsScraper {
         List<Fight> fights = new ArrayList<>();
         try {
             Document doc = Jsoup.connect(BASE_URL).get();
-            Elements fightElements = doc.select("CSS selector for fight listings");  // Adjust selector based on actual HTML
-            for (Element fightElement : fightElements) {
+            Elements fightRows = doc.select("tbody tr");  // Select each row in the table
+            for (Element fightRow : fightRows) {
                 Fight fight = new Fight();
-                fight.setFighterOne(fightElement.select("CSS selector for fighter one").text());
-                fight.setFighterTwo(fightElement.select("CSS selector for fighter two").text());
-                // Assuming each bookmaker odds is within a sub-element
-                Elements oddsElements = fightElement.select("CSS selector for bookmakers' odds");
+
+                // Select fighter names
+                fight.setFighterOne(fightRow.select("td:nth-child(1)").text());  // Adjust if needed
+                fight.setFighterTwo(fightRow.select("td:nth-child(2)").text());  // Adjust if needed
+
+                // Select odds for each bookmaker
                 Map<String, String> odds = new HashMap<>();
-                for (Element oddsElement : oddsElements) {
-                    String bookmaker = oddsElement.select("CSS selector for bookmaker name").text();
-                    String odd = oddsElement.select("CSS selector for the odds value").text();
-                    odds.put(bookmaker, odd);
-                }
+                odds.put("DraftKings", fightRow.select("td:nth-child(3) span.bestbet").text());
+                odds.put("BetMGM", fightRow.select("td:nth-child(4) span.bestbet").text());
+                odds.put("Caesars", fightRow.select("td:nth-child(5) span.bestbet").text());
+                odds.put("BetRivers", fightRow.select("td:nth-child(6) span.bestbet").text());
+                odds.put("FanDuel", fightRow.select("td:nth-child(7) span.bestbet").text());
+                odds.put("BetWay", fightRow.select("td:nth-child(8) span.bestbet").text());
+
                 fight.setOdds(odds);
                 fights.add(fight);
             }
@@ -37,18 +44,34 @@ public class FightOddsScraper {
         }
         return fights;
     }
-
-
 }
 
-public class Fight 
-{
+public class Fight {
     private String fighterOne;
     private String fighterTwo;
     private Map<String, String> odds;
 
-    public void setOdds(odds)
-    {
+    public String getFighterOne() {
+        return fighterOne;
+    }
+
+    public void setFighterOne(String fighterOne) {
+        this.fighterOne = fighterOne;
+    }
+
+    public String getFighterTwo() {
+        return fighterTwo;
+    }
+
+    public void setFighterTwo(String fighterTwo) {
+        this.fighterTwo = fighterTwo;
+    }
+
+    public Map<String, String> getOdds() {
+        return odds;
+    }
+
+    public void setOdds(Map<String, String> odds) {
         this.odds = odds;
     }
 }

@@ -1,22 +1,20 @@
-package com.rsharkar.arbitrager.controller;
-import org.springframework.beans.factory.annotation.Autowired;
+/* src/main/java\com\rsharkar\arbitrager/ FightController.java */
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.rsharkar.arbitrager.service.FightOddsScraper;
 import java.util.List;
 
-/*===========================================================================*/
-
 @RestController
-@RequestMapping("/api/fights")
-public class FightController 
-{
-    @Autowired
-    private FightOddsScraper fightOddsScraper;
+public class FightOddsController {
 
-    @GetMapping
-    public List<Fight> getAllFights() {
+    private final FightOddsScraper fightOddsScraper;
+
+    // Spring automatically injects FightOddsScraper using constructor injection
+    public FightOddsController(FightOddsScraper fightOddsScraper) {
+        this.fightOddsScraper = fightOddsScraper;
+    }
+
+    @GetMapping("/scrape-fights")  // Specific annotation for HTTP GET
+    public List<Fight> scrapeFights() {
         return fightOddsScraper.scrapeOdds();
     }
 }

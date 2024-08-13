@@ -1,3 +1,6 @@
+/* src/main/java\com\rsharkar\arbitrager/ ScheduledScrape.java */
+package com.rsharkar.Arbitrager;
+
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
