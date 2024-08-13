@@ -1,0 +1,17 @@
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+/*===========================================================================*/
+
+@Component
+public class ScheduledScrape 
+{
+    @Autowired
+    private ScheduledScrape oddsScraperService;
+
+    @Scheduled(fixedRate = 3600000) // every hour
+    public void reportCurrentTime() {
+        //ScheduledScrape.scrapeOdds();
+    }
+}
