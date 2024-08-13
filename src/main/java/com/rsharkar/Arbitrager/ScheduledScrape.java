@@ -2,19 +2,19 @@
 package com.rsharkar.Arbitrager;
 
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-/*===========================================================================*/
-
 @Component
-public class ScheduledScrape 
-{
-    @Autowired
-    private ScheduledScrape oddsScraperService;
+public class ScheduledScrape {
 
-    @Scheduled(fixedRate = 3600000) // every hour
-    public void reportCurrentTime() {
-        //ScheduledScrape.scrapeOdds();
+    private final FightOddsScraper fightOddsScraper;
+
+    public ScheduledScrape(FightOddsScraper fightOddsScraper) {
+        this.fightOddsScraper = fightOddsScraper;
+    }
+
+    @Scheduled(fixedRate = 3600000) // Scrape odds every hour
+    public void performScraping() {
+        fightOddsScraper.scrapeOdds(); 
     }
 }

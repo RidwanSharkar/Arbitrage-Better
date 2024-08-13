@@ -5,75 +5,65 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
-
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 @Service
 public class FightOddsScraper {
-
     private static final String BASE_URL = "https://www.bestfightodds.com/";
+    private static final List<String> BOOKMAKERS = List.of("DraftKings", "BetMGM", "Caesars", "BetRivers", "FanDuel", "BetWay");
 
     public List<Fight> scrapeOdds() {
         List<Fight> fights = new ArrayList<>();
-        try {
-            Document doc = Jsoup.connect(BASE_URL).get();
-            Elements fightRows = doc.select("tbody tr");  // Select each row in the table
-            for (Element fightRow : fightRows) {
-                Fight fight = new Fight();
+        try 
+        {
+            Thread.sleep(10000);
+            Document doc = Jsoup.connect(BASE_URL)
+                     .userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36")
+                     .get();
+            Elements tableRows = doc.select(".odds-table tbody tr");
+            
+            for (int i = 0; i < tableRows.size(); i += 2) {
+                Element fighterOneRow = tableRows.get(i);
+                Element fighterTwoRow = tableRows.get(i + 1);
 
-                // Select fighter names
-                fight.setFighterOne(fightRow.select("td:nth-child(1)").text());  // Adjust if needed
-                fight.setFighterTwo(fightRow.select("td:nth-child(2)").text());  // Adjust if needed
+                String fighterOne = fighterOneRow.select("th").text();
+                String fighterTwo = fighterTwoRow.select("th").text();
 
-                // Select odds for each bookmaker
-                Map<String, String> odds = new HashMap<>();
-                odds.put("DraftKings", fightRow.select("td:nth-child(3) span.bestbet").text());
-                odds.put("BetMGM", fightRow.select("td:nth-child(4) span.bestbet").text());
-                odds.put("Caesars", fightRow.select("td:nth-child(5) span.bestbet").text());
-                odds.put("BetRivers", fightRow.select("td:nth-child(6) span.bestbet").text());
-                odds.put("FanDuel", fightRow.select("td:nth-child(7) span.bestbet").text());
-                odds.put("BetWay", fightRow.select("td:nth-child(8) span.bestbet").text());
+                Map<String, String> oddsFighterOne = getOddsForFighter(fighterOneRow);
+                Map<String, String> oddsFighterTwo = getOddsForFighter(fighterTwoRow);
 
-                fight.setOdds(odds);
+                Map<String, Map<String, String>> odds = new LinkedHashMap<>();
+                odds.put(fighterOne, oddsFighterOne);
+                odds.put(fighterTwo, oddsFighterTwo);
+
+                Fight fight = new Fight(fighterOne, fighterTwo, odds);
                 fights.add(fight);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+        } 
+        catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            System.out.println("Thread interrupted: " + e.getMessage());
+        } 
+        catch (IOException e) {
+            System.out.println("Failed to fetch data: " + e.getMessage());
         }
         return fights;
     }
-}
 
-public class Fight {
-    private String fighterOne;
-    private String fighterTwo;
-    private Map<String, String> odds;
-
-    public String getFighterOne() {
-        return fighterOne;
-    }
-
-    public void setFighterOne(String fighterOne) {
-        this.fighterOne = fighterOne;
-    }
-
-    public String getFighterTwo() {
-        return fighterTwo;
-    }
-
-    public void setFighterTwo(String fighterTwo) {
-        this.fighterTwo = fighterTwo;
-    }
-
-    public Map<String, String> getOdds() {
+    private Map<String, String> getOddsForFighter(Element fighterRow) {
+        Map<String, String> odds = new LinkedHashMap<>();
+        Elements oddsElements = fighterRow.select("td");
+        for (int i = 0; i < BOOKMAKERS.size() && i < oddsElements.size(); i++) {
+            String odd = oddsElements.get(i).text();
+            odds.put(BOOKMAKERS.get(i), odd);
+        }
         return odds;
     }
 
-    public void setOdds(Map<String, String> odds) {
-        this.odds = odds;
-    }
+
 }
+
