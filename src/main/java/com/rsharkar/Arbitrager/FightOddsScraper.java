@@ -21,9 +21,15 @@ public class FightOddsScraper {
         try 
         {
             Thread.sleep(10000);
-            Document doc = Jsoup.connect(BASE_URL)
-                     .userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36")
-                     .get();
+            Document doc = Jsoup.connect("https://www.bestfightodds.com/")
+                                .header("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8")
+                                .header("Accept-Encoding", "gzip, deflate, br")
+                                .header("Accept-Language", "en-US,en;q=0.5")
+                                .header("Connection", "keep-alive")
+                                .userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0")
+                                .referrer("http://www.google.com")
+                                .timeout(8000)
+                                .get();
             Elements tableRows = doc.select(".odds-table tbody tr");
             
             for (int i = 0; i < tableRows.size(); i += 2) {
