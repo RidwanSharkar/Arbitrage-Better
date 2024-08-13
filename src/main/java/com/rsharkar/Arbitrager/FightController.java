@@ -1,4 +1,5 @@
 /* src/main/java\com\rsharkar\arbitrager/ FightController.java */
+package com.rsharkar.Arbitrager;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.List;

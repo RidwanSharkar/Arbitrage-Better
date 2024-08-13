@@ -1,5 +1,5 @@
 /* src/main/java\com\rsharkar\arbitrager/ ArbitragerController.java */
-package com.example.arbitrageapp;
+package com.rsharkar.Arbitrager;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

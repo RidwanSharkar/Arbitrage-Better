@@ -1,3 +1,5 @@
+/* src/main/java\com\rsharkar\arbitrager/ FightOddsScraper.java */
+package com.rsharkar.Arbitrager;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
