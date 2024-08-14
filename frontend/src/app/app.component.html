@@ -1,0 +1,36 @@
+<!-- src/app/app.component.html -->
+
+<div>
+  <h1>MMA Arbitrage Better</h1>
+  <router-outlet></router-outlet>
+
+  <ng-container *ngFor="let fight of fights; let i = index">
+    <!-- Display event title if it's a new event or the first fight -->
+    <ng-container *ngIf="!i || fights[i - 1].eventTitle !== fight.eventTitle">
+      <h2>{{ fight.eventTitle }}</h2>
+    </ng-container>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Fighter</th>
+          <th *ngFor="let bookmaker of bookmakers">{{ bookmaker }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ fight.fighterOne }}</td>
+          <td *ngFor="let bookmaker of bookmakers">{{ getOdds(fight, fight.fighterOne, bookmaker) }}</td>
+        </tr>
+        <tr>
+          <td>{{ fight.fighterTwo }}</td>
+          <td *ngFor="let bookmaker of bookmakers">{{ getOdds(fight, fight.fighterTwo, bookmaker) }}</td>
+        </tr>
+        <!-- SPACER ROW -->
+        <tr class="spacer"><td [attr.colspan]="bookmakers.length + 1"></td></tr>
+      </tbody>
+    </table>
+  </ng-container>
+</div>
+
+
