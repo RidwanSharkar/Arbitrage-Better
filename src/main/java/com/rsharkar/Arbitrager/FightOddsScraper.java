@@ -33,6 +33,7 @@ public class FightOddsScraper {
             Elements tableRows = doc.select(".odds-table tbody tr");
             
             for (int i = 0; i < tableRows.size(); i += 2) {
+                Thread.sleep(2000);
                 Element fighterOneRow = tableRows.get(i);
                 Element fighterTwoRow = tableRows.get(i + 1);
 
@@ -62,7 +63,7 @@ public class FightOddsScraper {
 
     private Map<String, String> getOddsForFighter(Element fighterRow) {
         Map<String, String> odds = new LinkedHashMap<>();
-        Elements oddsElements = fighterRow.select("td");
+        Elements oddsElements = fighterRow.select("td span");
         for (int i = 0; i < BOOKMAKERS.size() && i < oddsElements.size(); i++) {
             String odd = oddsElements.get(i).text();
             odds.put(BOOKMAKERS.get(i), odd);
@@ -72,4 +73,3 @@ public class FightOddsScraper {
 
 
 }
-
