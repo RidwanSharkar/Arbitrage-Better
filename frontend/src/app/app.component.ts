@@ -1,8 +1,10 @@
 // frontend/src/app/app.component.ts
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule  } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { CommonModule } from '@angular/common';
+
 
 export interface Fight {
     eventTitle: string;
@@ -18,7 +20,9 @@ export interface Fight {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [CommonModule, HttpClientModule]
 })
 
 export class AppComponent implements OnInit {
