@@ -6,21 +6,22 @@ table {
     }
     
     th, td {
-        border: 1px solid #dddddd; 
+        border: 1px solid #181818; 
         text-align: left; 
         padding: 8px; 
     }
     
     th {
-        background-color: #f2f2f2; 
+        background-color: #8b8b8b; 
         color: #333; 
     }
     
     tr:nth-child(even) {
-        background-color: #f9f9f9;
+        background-color: #d3d3d3;
     }
     
     tr:hover {
-        background-color: #ddd; 
+        background-color: #755252; 
     }
+    
     

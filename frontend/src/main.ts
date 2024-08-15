@@ -1,4 +1,4 @@
-// src/main.ts
+// frontend/src/main.ts
 
 import { importProvidersFrom } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
