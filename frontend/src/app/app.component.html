@@ -1,38 +1,41 @@
-<!-- src/app/app.component.html -->
+<!-- frontend/src/app/app.component.html -->
 
 <div>
-  <h1>MMA Arbitrage Better</h1>
-  <router-outlet></router-outlet>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Fighter</th>
-        <th *ngFor="let bookmaker of bookmakers">{{ bookmaker }}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <ng-container *ngFor="let fight of fights">
-        <tr>
-          <td>{{ fight.fighterOne }}</td>
-          <td *ngFor="let bookmaker of bookmakers">
-            {{ getOdds(fight, fight.fighterOne, bookmaker) }}
-          </td>
-        </tr>
-        <tr>
-          <td>{{ fight.fighterTwo }}</td>
-          <td *ngFor="let bookmaker of bookmakers">
-            {{ getOdds(fight, fight.fighterTwo, bookmaker) }}
-          </td>
-        </tr>
-        <!-- SPACER ROW -->
-        <tr class="spacer">
-          <td [attr.colspan]="bookmakers.length + 1"></td>
-        </tr>
-      </ng-container>
-    </tbody>
-  </table>
-
-</div>
-
-
+        <h1>MMA Arbitrage Better</h1>
+        <p>Potential Arbitrage Bets:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Fighter</th>
+              <th *ngFor="let bookmaker of bookmakers">{{ bookmaker }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngIf="fights.length > 0; else noDataTemplate">
+              <ng-container *ngFor="let fight of fights">
+                <tr>
+                  <td>{{ fight.fighterOne }}</td>
+                  <td *ngFor="let bookmaker of bookmakers">
+                    {{ getOdds(fight, fight.fighterOne, bookmaker) }}
+                  </td>
+                </tr>
+                <tr>
+                  <td>{{ fight.fighterTwo }}</td>
+                  <td *ngFor="let bookmaker of bookmakers">
+                    {{ getOdds(fight, fight.fighterTwo, bookmaker) }}
+                  </td>
+                </tr>
+                <!-- SPACER ROW -->
+                <tr class="spacer">
+                  <td [attr.colspan]="bookmakers.length + 1"></td>
+                </tr>
+              </ng-container>
+            </ng-container>
+          </tbody>
+        </table>
+        <ng-template #noDataTemplate>
+          <tr>
+            <td [attr.colspan]="bookmakers.length + 1">No data available</td>
+          </tr>
+        </ng-template>
+      </div>

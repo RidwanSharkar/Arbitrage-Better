@@ -1,8 +1,7 @@
-// src/app/app.routes.ts
+// frontend/src/app/app.routes.ts
 import { Routes } from '@angular/router';
-import { FightsComponent } from './fights/fights.component';
+import { FightsComponent } from './fights.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/fights', pathMatch: 'full' },
-  { path: 'fights', component: FightsComponent }
+  { path: '', component: FightsComponent }
 ];

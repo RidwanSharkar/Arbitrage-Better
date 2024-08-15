@@ -1,4 +1,5 @@
-// frontend/src/app/app.component.ts
+// src/app/fights/fight.components.ts
+
 import { Component, OnInit } from '@angular/core';
 import { FightService } from './fight.service';
 import { Fight } from './fight.model';
@@ -9,8 +10,7 @@ import { Fight } from './fight.model';
   styleUrls: ['./fights.component.css']
 })
 
-export class AppComponent implements OnInit {
-  title = 'Arbitrager';
+export class FightsComponent implements OnInit {
   fights: Fight[] = [];
   bookmakers: string[] = ['DraftKings', 'BetMGM', 'Caesars', 'BetRivers', 'FanDuel', 'BetWay'];
 
@@ -32,3 +32,4 @@ export class AppComponent implements OnInit {
     return fight.odds[fighter]?.[bookmaker] || 'N/A';
   }
 }
+

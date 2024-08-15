@@ -1,4 +1,4 @@
-// src/app/fights/fight.components.specs.ts
+// frontend/src/app/fight.components.specs.ts
 
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 

@@ -1,4 +1,4 @@
-// src/app/models/fight.model.ts
+// frontend/src/app/fight.model.ts
 
 export interface Fight {
     eventTitle: string;

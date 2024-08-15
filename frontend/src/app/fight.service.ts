@@ -1,17 +1,14 @@
-// src/app/services/fight.service.ts
-
+// frontend/src/app/fight.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Fight } from '../../models/fight.model'; 
-
-/*===========================================================================*/
+import { Fight } from './fight.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FightService {
-  private apiUrl = 'http://localhost:8080/scrape-fights';
+  private apiUrl = 'http://localhost:8080/scrape-fights'; 
 
   constructor(private http: HttpClient) {}
 
