@@ -1,4 +1,4 @@
-/* src/main/java\com\rsharkar\arbitrager/ FightOddsScraper2.java */
+/* src/main/java\com\rsharkar\arbitrager/ FightOddsScraper.java */
 package com.rsharkar.Arbitrager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,9 +20,11 @@ public class FightOddsScraper
 {
     private static final String BASE_URL = "https://www.bestfightodds.com/";
     private static final List<String> requiredBookmakers = List.of("DraftKings", "BetMGM", "Caesars", "BetRivers", "FanDuel", "BetWay");
+    private WebDriver driver;
+    
     public List<Fight> scrapeOdds() 
     {
-        WebDriver driver = null; 
+        driver = null; 
         List<Fight> fights = new ArrayList<>();
         try {
             WebDriverManager.chromedriver().clearDriverCache().setup();
@@ -54,7 +56,7 @@ public class FightOddsScraper
                 String eventTitle = header.getText();
 
                 if (eventTitle.equals("FUTURE EVENTS")) {
-                    System.out.println("Skipping 'Future Events'...");
+                    System.out.println("Skipping 'Future Events'...READY");
                     break;
                 }
                 System.out.println("Processing event: " + eventTitle);
@@ -91,11 +93,20 @@ public class FightOddsScraper
         return fights;
     }
 
-    private Map<String, String> getOddsForFighter(WebElement fighterRow) {
+    private Map<String, String> getOddsForFighter(WebElement fighterRow) 
+    {
+        //JavascriptExecutor js = (JavascriptExecutor) driver; TRY
+        //String odds = (String) js.executeScript("return arguments[0].textContent;", oddsElement);
+
         Map<String, String> odds = new LinkedHashMap<>();
-        List<WebElement> oddsElements = fighterRow.findElements(By.cssSelector("td[class*='bookmaker'] span"));
+        //List<WebElement> oddsElements = fighterRow.findElements(By.cssSelector("td[class*='bookmaker'] span"));
+        //List<WebElement> oddsElements = fighterRow.findElements(By.cssSelector("td[data-b]"));
+        List<WebElement> oddsElements = fighterRow.findElements(By.cssSelector("td span"));
         int bookmakerIndex = 0;
+    
+        
         for (WebElement oddsElement : oddsElements) {
+            
             String bookmakerName = requiredBookmakers.get(bookmakerIndex);
             String odd = oddsElement.getText();
             odds.put(bookmakerName, odd);
@@ -107,5 +118,12 @@ public class FightOddsScraper
         return odds;
     }
 
-
 }
+
+
+/*
+
+
+
+
+*/

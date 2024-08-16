@@ -16,11 +16,11 @@ td[rowspan] {
 }
 
 .arbitrage-table {
-    width: 100%; 
+    width: 90%; 
     border-collapse: collapse; 
     margin-top: 20px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 20px;
     overflow: hidden;
 }
 
@@ -31,17 +31,17 @@ th, td {
 }
 
 th {
-    background-color: #f8d7da; 
+    background-color: #edb1b6; 
     color: #4d4d4d; 
     font-size: 16px;
 }
 
 tr:nth-child(even) {
-    background-color: #fdecef;
+    background-color: #cd8290;
 }
 
 tr:hover {
-    background-color: #fce2e6;
+    background-color: #47b6ea;
     cursor: pointer;
 }
 
@@ -52,7 +52,7 @@ h1 {
 
 p {
     text-align: center;
-    color: #6f4e4e;
+    color: #a34e4e;
 }
 
 .spacer {
