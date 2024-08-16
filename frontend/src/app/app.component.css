@@ -1,4 +1,68 @@
 /* frontend/src/app/app.component.css */
+
+td[rowspan] {
+    font-weight: bold;
+    vertical-align: middle;  /* Ensure the title aligns nicely */
+    background-color: #f8d7da;  /* Faded pink for the event title cells */
+  }
+
+/* ========================================================================================= */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.arbitrage-table {
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    text-align: left; 
+    padding: 12px 15px;
+    border-bottom: 1px solid #f8d7da;
+}
+
+th {
+    background-color: #f8d7da; 
+    color: #4d4d4d; 
+    font-size: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #fdecef;
+}
+
+tr:hover {
+    background-color: #fce2e6;
+    cursor: pointer;
+}
+
+h1 {
+    color: #b35a6a;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color: #6f4e4e;
+}
+
+.spacer {
+    height: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+
+/* 
 table {
         width: 100%; 
         border-collapse: collapse; 
@@ -23,5 +87,4 @@ table {
     tr:hover {
         background-color: #755252; 
     }
-    
-    
+*/

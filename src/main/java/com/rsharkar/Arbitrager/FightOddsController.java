@@ -16,6 +16,8 @@ public class FightOddsController {
 
     @GetMapping("/scrape-fights") 
     public List<Fight> scrapeFights() {
-        return fightOddsScraper.scrapeOdds();
+        List<Fight> fights = fightOddsScraper.scrapeOdds();
+        System.out.println("Returning " + fights.size() + " fights to frontend");
+        return fights;
     }
 }
