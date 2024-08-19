@@ -82,10 +82,11 @@ public class FightOddsScraper
                         odds.put(fighterOne, oddsFighterOne);
                         odds.put(fighterTwo, oddsFighterTwo);
 
-                        Fight fight = new Fight(fighterOne, fighterTwo, odds);
+                        Fight fight = new Fight(eventTitle, fighterOne, fighterTwo, odds);
                         fights.add(fight);
                     }
                 }
+                System.out.println("Finished Scraping");
             }
         } 
         catch (Exception e) { throw new RuntimeException("Error during scraping", e); } 
@@ -95,18 +96,10 @@ public class FightOddsScraper
 
     private Map<String, String> getOddsForFighter(WebElement fighterRow) 
     {
-        //JavascriptExecutor js = (JavascriptExecutor) driver; TRY
-        //String odds = (String) js.executeScript("return arguments[0].textContent;", oddsElement);
-
         Map<String, String> odds = new LinkedHashMap<>();
-        //List<WebElement> oddsElements = fighterRow.findElements(By.cssSelector("td[class*='bookmaker'] span"));
-        //List<WebElement> oddsElements = fighterRow.findElements(By.cssSelector("td[data-b]"));
-        List<WebElement> oddsElements = fighterRow.findElements(By.cssSelector("td span"));
+        List<WebElement> oddsElements = fighterRow.findElements(By.cssSelector("span[id^='oID']")); // "td span.but-sg" "td span.ard.arage-1"
         int bookmakerIndex = 0;
-    
-        
         for (WebElement oddsElement : oddsElements) {
-            
             String bookmakerName = requiredBookmakers.get(bookmakerIndex);
             String odd = oddsElement.getText();
             odds.put(bookmakerName, odd);
@@ -119,11 +112,3 @@ public class FightOddsScraper
     }
 
 }
-
-
-/*
-
-
-
-
-*/

@@ -1,12 +1,28 @@
 /* frontend/src/app/app.component.css */
 
+body {
+    background-color: #e2a1a7; 
+}
+
+.event-title td {
+font-weight: bold;
+background-color: #e2a1a7;
+text-align: center;
+padding: 10px;
+font-size: 16px;
+color: #ffffff; /* White text color */
+font-family: 'Verdana', sans-serif;
+} 
+
+/* ========================================================================================= 
+
 td[rowspan] {
     font-weight: bold;
-    vertical-align: middle;  /* Ensure the title aligns nicely */
-    background-color: #f8d7da;  /* Faded pink for the event title cells */
+    vertical-align: middle;  
+    background-color: #f8d7da;
   }
-
-/* ========================================================================================= */
+  
+  */
 
 .container {
     max-width: 1200px;
@@ -16,7 +32,7 @@ td[rowspan] {
 }
 
 .arbitrage-table {
-    width: 90%; 
+    width: 100%; 
     border-collapse: collapse; 
     margin-top: 20px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -37,7 +53,11 @@ th {
 }
 
 tr:nth-child(even) {
-    background-color: #cd8290;
+    background-color: #e78c9d;
+}
+
+tr:nth-child(odd) {
+    background-color: #ec6262; 
 }
 
 tr:hover {
@@ -46,7 +66,7 @@ tr:hover {
 }
 
 h1 {
-    color: #b35a6a;
+    color: #ff4366;
     text-align: center;
 }
 

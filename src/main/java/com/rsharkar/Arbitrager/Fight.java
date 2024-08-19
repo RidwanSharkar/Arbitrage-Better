@@ -4,15 +4,25 @@ import java.util.Map;
 
 public class Fight 
 {
+    private String eventTitle;
     private String fighterOne;
     private String fighterTwo;
     private Map<String, Map<String, String>> odds;  // Nested Map
 
-    public Fight(String fighterOne, String fighterTwo, Map<String, Map<String, String>> odds) 
+    public Fight(String eventTitle, String fighterOne, String fighterTwo, Map<String, Map<String, String>> odds) 
     {
+        this.eventTitle = eventTitle;
         this.fighterOne = fighterOne;
         this.fighterTwo = fighterTwo;
         this.odds = odds;
+    }
+
+    public String getEventTitle() {
+        return eventTitle;
+    }
+
+    public void setEventTitle(String eventTitle) {
+        this.eventTitle = eventTitle;
     }
 
     public String getFighterOne() {

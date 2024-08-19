@@ -6,31 +6,30 @@
   <table class="arbitrage-table">
     <thead>
       <tr>
-        <th>Event Title</th>
         <th>Fighter</th>
         <th *ngFor="let bookmaker of bookmakers">{{ bookmaker }}</th>
       </tr>
     </thead>
     <tbody>
-      <ng-container *ngFor="let fight of fights">
-        <tr>
-          <td rowspan="3">{{ fight.eventTitle }}</td>  <!-- Displaying Event Title -->
-          <td>{{ fight.fighterOne }}</td>
-          <td *ngFor="let bookmaker of bookmakers">
-            {{ getOdds(fight, fight.fighterOne, bookmaker) }}
-          </td>
+      <ng-container *ngFor="let group of eventGroups">
+        <tr class="event-title">
+            <td [attr.colspan]="bookmakers.length + 1">{{ group.eventTitle }}</td>
         </tr>
-        <tr>
-          <td>{{ fight.fighterTwo }}</td>
-          <td *ngFor="let bookmaker of bookmakers">
-            {{ getOdds(fight, fight.fighterTwo, bookmaker) }}
-          </td>
-        </tr>
-        <!-- SPACER ROW -->
-        <tr class="spacer">
-          <td [attr.colspan]="bookmakers.length + 1"></td>
-        </tr>
-      </ng-container>
+        <ng-container *ngFor="let fight of group.fights">
+            <tr>
+                <td>{{ fight.fighterOne }}</td>
+                <td *ngFor="let bookmaker of bookmakers">
+                    {{ getOdds(fight, fight.fighterOne, bookmaker) }}
+                </td>
+            </tr>
+            <tr>
+                <td>{{ fight.fighterTwo }}</td>
+                <td *ngFor="let bookmaker of bookmakers">
+                    {{ getOdds(fight, fight.fighterTwo, bookmaker) }}
+                </td>
+            </tr>
+          </ng-container>
+        </ng-container>
     </tbody>
   </table>
 </div>

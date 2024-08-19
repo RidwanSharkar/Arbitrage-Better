@@ -17,6 +17,11 @@ export interface Fight {
     };
 }
 
+export interface EventGroup {
+  eventTitle: string;
+  fights: Fight[];
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -27,6 +32,7 @@ export interface Fight {
 
 export class AppComponent implements OnInit {
   title = 'Arbitrager';
+  eventGroups: EventGroup[] = [];
   fights: Fight[] = [];
   bookmakers: string[] = ['DraftKings', 'BetMGM', 'Caesars', 'BetRivers', 'FanDuel', 'BetWay'];
   private apiUrl = 'http://localhost:8080/scrape-fights';
@@ -35,10 +41,12 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.getFights().subscribe({
-      next: (data) => this.fights = data,
-      error: (error) => console.error('Error fetching fights:', error)
+        next: (data) => {
+            this.groupFightsByEvent(data);
+        },
+        error: (error) => console.error('Error fetching fights:', error)
     });
-  }
+}
 
   getFights(): Observable<Fight[]> {
     return this.http.get<Fight[]>(this.apiUrl).pipe(
@@ -50,5 +58,18 @@ export class AppComponent implements OnInit {
 
   getOdds(fight: Fight, fighter: string, bookmaker: string): string {
     return fight.odds[fighter]?.[bookmaker] || 'N/A';
+  }
+
+    groupFightsByEvent(fights: Fight[]): void {
+      const grouped = fights.reduce((acc, fight) => {
+          const group = acc.find(g => g.eventTitle === fight.eventTitle);
+          if (group) {
+              group.fights.push(fight);
+          } else {
+              acc.push({ eventTitle: fight.eventTitle, fights: [fight] });
+          }
+          return acc;
+      }, [] as EventGroup[]);
+      this.eventGroups = grouped;
   }
 }
