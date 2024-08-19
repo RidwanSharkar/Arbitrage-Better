@@ -79,11 +79,13 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
+              "public/favicon.ico",
+              "src/app/assets",
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
-              }
-            ],
+              }],
             "styles": [
               "src/styles.css"
             ],

@@ -1,1 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+/* // frontend/src/styles.css */
+
+body {
+        background-color: #ffdada;
+    }

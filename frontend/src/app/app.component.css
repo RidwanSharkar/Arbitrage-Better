@@ -1,7 +1,26 @@
 /* frontend/src/app/app.component.css */
 
-body {
-    background-color: #e2a1a7; 
+
+.header-image {
+    width: 100%;
+    padding-bottom: 0px;
+    padding: 0px;
+}
+
+.header-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0px;
+}
+
+.arbitrage-opportunity {
+    background-color: #00ffa2 !important;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 .event-title td {
@@ -10,19 +29,9 @@ background-color: #e2a1a7;
 text-align: center;
 padding: 10px;
 font-size: 16px;
-color: #ffffff; /* White text color */
+color: #f26161; 
 font-family: 'Verdana', sans-serif;
 } 
-
-/* ========================================================================================= 
-
-td[rowspan] {
-    font-weight: bold;
-    vertical-align: middle;  
-    background-color: #f8d7da;
-  }
-  
-  */
 
 .container {
     max-width: 1200px;
@@ -41,14 +50,14 @@ td[rowspan] {
 }
 
 th, td {
-    text-align: left; 
-    padding: 12px 15px;
+    color: #ffffff; 
+    padding: 9px 12px;
     border-bottom: 1px solid #f8d7da;
+    text-align: left; 
 }
 
 th {
-    background-color: #edb1b6; 
-    color: #4d4d4d; 
+    background-color: #ee99a0; 
     font-size: 16px;
 }
 
@@ -57,7 +66,7 @@ tr:nth-child(even) {
 }
 
 tr:nth-child(odd) {
-    background-color: #ec6262; 
+    background-color: #ea7681; 
 }
 
 tr:hover {
@@ -66,13 +75,17 @@ tr:hover {
 }
 
 h1 {
-    color: #ff4366;
+    color: #f26161;
     text-align: center;
+    font-size: 26px;
+    font-family: 'Verdana', sans-serif;
 }
 
 p {
     text-align: center;
-    color: #a34e4e;
+    color: #f26161;
+    font-size: 14px;
+    font-family: 'Verdana', sans-serif;
 }
 
 .spacer {
@@ -80,31 +93,3 @@ p {
     background-color: transparent;
     border: none;
 }
-
-
-/* 
-table {
-        width: 100%; 
-        border-collapse: collapse; 
-        margin-top: 20px; 
-    }
-    
-    th, td {
-        border: 1px solid #181818; 
-        text-align: left; 
-        padding: 8px; 
-    }
-    
-    th {
-        background-color: #8b8b8b; 
-        color: #333; 
-    }
-    
-    tr:nth-child(even) {
-        background-color: #d3d3d3;
-    }
-    
-    tr:hover {
-        background-color: #755252; 
-    }
-*/

@@ -1,35 +1,51 @@
 <!-- frontend/src/app/app.component.html -->
 
+<div class="header-image">
+  <img src="ArbitragerHeader.png" alt="Arbitrage Better Header" />
+</div>
+
 <div class="container">
-  <h1>MMA Arbitrage Better</h1>
-  <p>Potential Arbitrage Bets:</p>
-  <table class="arbitrage-table">
-    <thead>
-      <tr>
-        <th>Fighter</th>
-        <th *ngFor="let bookmaker of bookmakers">{{ bookmaker }}</th>
-      </tr>
-    </thead>
-    <tbody>
+  <p>Current MMA Arbitrage Betting Opportunities:</p>
+  <ul>
+    <li *ngIf="isArbitrageAvailable()">
       <ng-container *ngFor="let group of eventGroups">
-        <tr class="event-title">
-            <td [attr.colspan]="bookmakers.length + 1">{{ group.eventTitle }}</td>
-        </tr>
         <ng-container *ngFor="let fight of group.fights">
-            <tr>
-                <td>{{ fight.fighterOne }}</td>
-                <td *ngFor="let bookmaker of bookmakers">
-                    {{ getOdds(fight, fight.fighterOne, bookmaker) }}
-                </td>
-            </tr>
-            <tr>
-                <td>{{ fight.fighterTwo }}</td>
-                <td *ngFor="let bookmaker of bookmakers">
-                    {{ getOdds(fight, fight.fighterTwo, bookmaker) }}
-                </td>
-            </tr>
+          <ng-container *ngIf="fight.arbitragePossible">
+            <li>
+              {{ fight.fighterOne }} vs {{ fight.fighterTwo }}:
+              {{ fight.arbitrageDetails!.bookmaker1 }} vs {{ fight.arbitrageDetails!.bookmaker2 }}
+              ({{ fight.arbitrageDetails!.profit | number:'1.2-2' }}% Guaranteed Profit)
+            </li>
           </ng-container>
         </ng-container>
-    </tbody>
-  </table>
+      </ng-container>
+    </li>
+  </ul>
+  <ng-container *ngFor="let group of eventGroups">
+    <h2>{{ group.eventTitle }}</h2>
+    <table class="arbitrage-table">
+      <thead>
+        <tr class="event-title">
+          <th>Fighter</th>
+          <th *ngFor="let bookmaker of bookmakers">{{ bookmaker }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let fight of group.fights">
+          <tr [ngClass]="{'arbitrage-opportunity': fight.arbitragePossible}">
+            <td>{{ fight.fighterOne }}</td>
+            <td *ngFor="let bookmaker of bookmakers" [ngClass]="{'bold': fight.arbitragePossible && (bookmaker === fight.arbitrageDetails?.bookmaker1 || bookmaker === fight.arbitrageDetails?.bookmaker2)}">
+            {{ getOdds(fight, fight.fighterOne, bookmaker) }}
+        </td>
+          </tr>
+          <tr [ngClass]="{'arbitrage-opportunity': fight.arbitragePossible}">
+            <td>{{ fight.fighterTwo }}</td>
+            <td *ngFor="let bookmaker of bookmakers" [ngClass]="{'bold': fight.arbitragePossible && (bookmaker === fight.arbitrageDetails?.bookmaker1 || bookmaker === fight.arbitrageDetails?.bookmaker2)}">
+              {{ getOdds(fight, fight.fighterTwo, bookmaker) }}
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </ng-container>
 </div>
