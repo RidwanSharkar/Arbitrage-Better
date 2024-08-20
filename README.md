@@ -17,25 +17,45 @@ ________________________________________________________________________________
 ________________________________________________________________________________________________________________
 UNDERSTANDING ODDS:
 
-• (+140) Odds: if you bet $100, you will win $140 -> Total Return: $240 <br>
-• The (+) indicates the fighter is the underdog.
+(+140) Odds: <br>
+• if you bet $100, you will win $140 -> Total Return: $240 <br>
+• The (+) indicates the fighter is the **Underdog**.
 
-• (-166) Odds: you need to bet $166 to win $100 -> Total Return: $266 <br>
-• The (-) indicates the fighter is the favorite.
+(-166) Odds: <br>
+• you need to bet $166 to win $100 -> Total Return: $266 <br>
+• The (-) indicates the fighter is the **Favorite**.
 
 ________________________________________________________________________________________________________________
 ARBITRAGE BETTING:
 
 ![image](https://github.com/user-attachments/assets/265fc27e-8e24-41cf-8821-596a05d621bb)
 
-In this example:<br>
-Odds for [Ilia] at DraftKings = 1 +  
-Odds for [Max] 
+By placing bets on both fighters on different bookmakers:
+
+Decimal Odds for [Ilia] at DraftKings = 1 + (100/166) ≈ 1.60 <br>
+Reciprocal of Odds: (1/1.60) ≈ 0.625
+
+Decimal Odds for [Max] at Caesars = 1 + (170/100) = 2.70 <br>
+Reciprocal of Odds: (1/2.70) ≈ 0.370
+
+To find an arbitrage opportunity, we must look for a combination of odds on both fighters where the sum of the reciprocals of the decimal odds is less than 1:
+
+0.625 + 0.370 = 0.995 
+
+This is because the total cost of the bets is less than the guaranteed return from one of the outcomes.
+
+• < 1: Indicates an arbitrage opportunity. The total implied probability is under 100%, suggesting that the market has underpriced the combined probability of all possible outcomes, offering a guaranteed profit scenario regardless of the outcome. 
+
+• = 1: Implies that the market is perfectly balanced, i.e Payout = Risk
+
+• > 1: Implies no arbitrage bet is possible and the bookmakers may have overpricing the combined probability of the outcomes.
 
 ![image](https://github.com/user-attachments/assets/097323ba-698e-49b7-b97c-2e5612299842)
 
+However, the arbitrage opportunity disappears within hours as DraftKings odds for [Ilia] rise to -175 to close this gap. Bookmakers collaborate to resolve any arbitrage betting opportunities, allowing only small windows of time to capitalize. This is the reasoning behind why scraping live odds is scheduled for every 15 minutes and primed to alert subscribers via email when a current arbitrage bet exists.  
 
 ![Arbitrage Example 2](https://github.com/user-attachments/assets/e5ec43fc-3866-47a9-a2e0-faa94cbb624f)
+
 
 
 
