@@ -1,9 +1,7 @@
-________________________________________________________________________________________________________________
+
 **MMA Arbitrage Betting App**
-
-![Homepage1](https://github.com/user-attachments/assets/09e9595e-9688-4e34-8965-edc380edf3ef)
-
 ________________________________________________________________________________________________________________
+
 **OVERVIEW:**
 
 • Arbitrage-Better is a web application that helps users identify and exploit arbitrage betting opportunities in MMA fights for guaranteed profit. The application scrapes live odds from bookmakers and calculates potential arbitrage bets, highlighting them for the user in real-time. 
@@ -11,13 +9,17 @@ ________________________________________________________________________________
 • Since there only exists a narrow window of time to capitalize on arbitrage bets, scheduled scraping and an email subscription service is implemented that notifies subscribers when a current arbitrage opportunity exists.
 
 ________________________________________________________________________________________________________________
+
+![Homepage1](https://github.com/user-attachments/assets/09e9595e-9688-4e34-8965-edc380edf3ef)
+
+________________________________________________________________________________________________________________
 **UNDERSTANDING ODDS:**
 
-(+140) Odds: <br>
+**(+140) Odds:** <br>
 &nbsp; &nbsp; &nbsp; &nbsp; • if you bet $100, you will win $140 -> Total Return: $240 <br>
 &nbsp; &nbsp; &nbsp; &nbsp; • The (+) indicates the fighter is the **Underdog**.
 
-(-166) Odds: <br>
+**(-166) Odds:** <br>
 &nbsp; &nbsp; &nbsp; &nbsp; • you need to bet $166 to win $100 -> Total Return: $266 <br>
 &nbsp; &nbsp; &nbsp; &nbsp; • The (-) indicates the fighter is the **Favorite**.
 
@@ -35,14 +37,16 @@ By placing bets on both fighters on different bookmakers:
 &nbsp; &nbsp; &nbsp; &nbsp; [Max] at Caesars <br>
 &nbsp; &nbsp; &nbsp; &nbsp; Decimal Odds for  = 1 + (170/100) = 2.70 <br>
 &nbsp; &nbsp; &nbsp; &nbsp; Reciprocal of Odds: (1/2.70) ≈ **0.370**
-
+&nbsp; &nbsp; &nbsp; &nbsp; ______________________________________________
 &nbsp; &nbsp; &nbsp; &nbsp; 0.625 + 0.370 = **0.995**
 
 To find an arbitrage opportunity, we must look for a combination of odds on both fighters where the sum of the reciprocals of the decimal odds is less than 1:
 
-• **[< 1]**: Indicates an arbitrage opportunity. The total implied probability is under 100%, suggesting that the market has underpriced the combined &nbsp;probability of all possible outcomes, offering a guaranteed profit scenario regardless of the outcome of the fight. <br>
-• **[= 1]**: Implies that the market is perfectly balanced, i.e Payout = Risk.<br>
-• **[> 1]**: Implies no arbitrage bet is possible and the bookmakers may have overpricing the combined probability of the outcomes.
+• **[< 1]** Indicates an arbitrage opportunity. The total implied probability is under 100%, suggesting that the market has underpriced the combined &nbsp; &nbsp; probability of all possible outcomes, offering a guaranteed profit scenario regardless of the outcome of the fight.
+
+• **[= 1]** Implies that the market is perfectly balanced, i.e Payout = Risk.
+
+• **[> 1]** Implies no arbitrage bet is possible and the bookmakers may have overpricing the combined probability of the outcomes.
 
 ________________________________________________________________________________________________________________
 
