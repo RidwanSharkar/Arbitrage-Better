@@ -6,9 +6,9 @@ ________________________________________________________________________________
 ________________________________________________________________________________________________________________
 **OVERVIEW:**
 
-• Arbitrage-Better is a web application that helps users identify and exploit arbitrage betting opportunities in MMA fights. The application scrapes live odds from bookmakers and calculates potential arbitrage bets, highlighting them for the user in real-time. 
+• Arbitrage-Better is a web application that helps users identify and exploit arbitrage betting opportunities in MMA fights for guaranteed profit. The application scrapes live odds from bookmakers and calculates potential arbitrage bets, highlighting them for the user in real-time. 
 
-• Since there only exists a narrow window of time to capitalize on arbitrage bets, an email subscription service is implemented that notifies subscribers when a current arbitrage opportunity exists.
+• Since there only exists a narrow window of time to capitalize on arbitrage bets, scheduled scraping and an email subscription service is implemented that notifies subscribers when a current arbitrage opportunity exists.
 
 ________________________________________________________________________________________________________________
 **UNDERSTANDING ODDS:**
@@ -28,21 +28,23 @@ ________________________________________________________________________________
 
 By placing bets on both fighters on different bookmakers:
 
-&nbsp; &nbsp; &nbsp; &nbsp; Decimal Odds for [Ilia] at DraftKings = 1 + (100/166) ≈ 1.60 <br>
+&nbsp; &nbsp; &nbsp;[Ilia] at DraftKings <br>
+&nbsp; &nbsp; &nbsp; &nbsp; Decimal Odds for  = 1 + (100/166) ≈ 1.60 <br>
 &nbsp; &nbsp; &nbsp; &nbsp; Reciprocal of Odds: (1/1.60) ≈ **0.625**
 
-&nbsp; &nbsp; &nbsp; &nbsp; Decimal Odds for [Max] at Caesars = 1 + (170/100) = 2.70 <br>
+&nbsp; &nbsp; &nbsp;[Max] at Caesars
+&nbsp; &nbsp; &nbsp; &nbsp; Decimal Odds for  = 1 + (170/100) = 2.70 <br>
 &nbsp; &nbsp; &nbsp; &nbsp; Reciprocal of Odds: (1/2.70) ≈ **0.370**
 
 To find an arbitrage opportunity, we must look for a combination of odds on both fighters where the sum of the reciprocals of the decimal odds is less than 1:
 
-&nbsp; &nbsp; &nbsp; &nbsp; 0.625 + 0.370 = **0.995 **
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0.625 + 0.370 = **0.995**
 
-• **< 1**: Indicates an arbitrage opportunity. The total implied probability is under 100%, suggesting that the market has underpriced the combined probability of all possible outcomes, offering a guaranteed profit scenario regardless of the outcome of the fight. 
+• **[< 1]**: Indicates an arbitrage opportunity. The total implied probability is under 100%, suggesting that the market has underpriced the combined &nbsp;probability of all possible outcomes, offering a guaranteed profit scenario regardless of the outcome of the fight. 
 
-• **= 1**: Implies that the market is perfectly balanced, i.e Payout = Risk.
+• **[= 1]**: Implies that the market is perfectly balanced, i.e Payout = Risk.
 
-• **> 1**: Implies no arbitrage bet is possible and the bookmakers may have overpricing the combined probability of the outcomes.
+• **[> 1]**: Implies no arbitrage bet is possible and the bookmakers may have overpricing the combined probability of the outcomes.
 
 ________________________________________________________________________________________________________________
 
@@ -54,13 +56,37 @@ ________________________________________________________________________________
 
 ![Arbitrage Example 2](https://github.com/user-attachments/assets/e5ec43fc-3866-47a9-a2e0-faa94cbb624f)
 
+&nbsp; &nbsp; &nbsp;[Jose Perez] at BetMGM <br>
+&nbsp; &nbsp; &nbsp; &nbsp; Decimal Odds: 1 + (100 / 165) ≈ 1.60 <br>
+&nbsp; &nbsp; &nbsp; &nbsp; Reciprocal of Odds: (1 / 1.60) ≈ **0.625**
 
+&nbsp; &nbsp; &nbsp;[Jesse Stim] at DraftKings <br>
+&nbsp; &nbsp; &nbsp; &nbsp; Decimal Odds for  = 1 + (265/100) ≈ 3.65 <br>
+&nbsp; &nbsp; &nbsp; &nbsp; Reciprocal of Odds: (1/3.65) ≈ **0.274**
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0.625 + 0.317 = **0.942**
+
+________________________________________________________________________________________________________________
+
+**EXAMPLE BET:**
+
+Bet **$305.56** on Fighter [Jesse Stim] at Draftkings: <br>
+&nbsp; &nbsp; &nbsp; &nbsp;• Expected Payout: $1,115.28
+
+Bet **$694.44** on Fighter [Jose Perez] at BetMGM: <br>
+&nbsp; &nbsp; &nbsp; &nbsp;• Expected Payout: $1,115.28
+
+&nbsp; &nbsp; &nbsp; &nbsp;Total Investment: $305.56 + $694.44 = **$1,000**
+&nbsp; &nbsp; &nbsp; &nbsp;Total Payout in Either Case: **$1,115.28**
+&nbsp; &nbsp; &nbsp; &nbsp;__________________________________________________
+&nbsp; &nbsp; &nbsp; &nbsp;Total Profit: $1,115.28 - $1,000 = **$115.28**
 
 
 ________________________________________________________________________________________________________________
 **NOTE: **
 
-Arbitrage betting is NOT illegal; however, 
+Use at your own risk. Arbitrage betting is NOT illegal; however, bookmakers will likely ban you from their betting platform if detected.
+
 ________________________________________________________________________________________________________________
 **TECH STACK:**
 
