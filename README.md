@@ -78,10 +78,10 @@ Bet **$305.56** on Fighter [Jesse Stirn] at Draftkings: <br>
 Bet **$694.44** on Fighter [Jose Perez] at BetMGM: <br>
 &nbsp; &nbsp; &nbsp; &nbsp;• Expected Payout: $1,115.28
 
-&nbsp; &nbsp; &nbsp; &nbsp; Total Investment: $305.56 + $694.44 = **$1,000** <br>
-&nbsp; &nbsp; &nbsp; &nbsp; Total Payout in Either Case: **$1,115.28** <br>
-&nbsp; &nbsp; &nbsp; &nbsp; __________________________________________________ <br>
-&nbsp; &nbsp; &nbsp; &nbsp; Total Profit: $1,115.28 - $1,000 = **$115.28**
+**Total Investment:** $305.56 + $694.44 = **$1,000** <br>
+**Total Payout in Either Case:** **$1,115.28** <br>
+__________________________________________________ <br>
+**Total Profit:** $1,115.28 - $1,000 = **$115.28**
 
 
 ________________________________________________________________________________________________________________
