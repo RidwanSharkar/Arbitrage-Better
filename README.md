@@ -2,11 +2,18 @@ ________________________________________________________________________________
 
 **MMA Arbitrage Betting App**
 
-________________________________________________________________________________________________________________
-
 ![Homepage1](https://github.com/user-attachments/assets/09e9595e-9688-4e34-8965-edc380edf3ef)
 
 ________________________________________________________________________________________________________________
+
+**OVERVIEW:**
+
+Arbitrage-Better is a web application that helps users identify and exploit arbitrage betting opportunities in MMA fights. The application scrapes odds from various bookmakers, calculates potential arbitrage bets, and highlights them for the user. Additionally, it features an email subscription service that notifies subscribers when a new arbitrage opportunity is detected.
+
+
+
+________________________________________________________________________________________________________________
+
 ARBITRAGE EXAMPLE:
 
 ![image](https://github.com/user-attachments/assets/265fc27e-8e24-41cf-8821-596a05d621bb)
@@ -17,4 +24,12 @@ ARBITRAGE EXAMPLE:
 ![Arbitrage Example 2](https://github.com/user-attachments/assets/e5ec43fc-3866-47a9-a2e0-faa94cbb624f)
 
 
+
 ________________________________________________________________________________________________________________
+**TECH STACK:**
+
+**Frontend:** Angular, TypeScript
+
+**Backend:** Spring Boot, Java
+
+**Scraping:** Selenium Webdriver, ChromeDriver, WebDriverManager
