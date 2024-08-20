@@ -18,12 +18,12 @@ ________________________________________________________________________________
 UNDERSTANDING ODDS:
 
 (+140) Odds: <br>
-&nbsp; • if you bet $100, you will win $140 -> Total Return: $240 <br>
-&nbsp; • The (+) indicates the fighter is the **Underdog**.
+&nbsp; &nbsp; &nbsp; &nbsp; • if you bet $100, you will win $140 -> Total Return: $240 <br>
+&nbsp; &nbsp; &nbsp; &nbsp; • The (+) indicates the fighter is the **Underdog**.
 
 (-166) Odds: <br>
-&nbsp; • you need to bet $166 to win $100 -> Total Return: $266 <br>
-&nbsp; • The (-) indicates the fighter is the **Favorite**.
+&nbsp; &nbsp; &nbsp; &nbsp; • you need to bet $166 to win $100 -> Total Return: $266 <br>
+&nbsp; &nbsp; &nbsp; &nbsp; • The (-) indicates the fighter is the **Favorite**.
 
 ________________________________________________________________________________________________________________
 ARBITRAGE BETTING:
@@ -32,23 +32,23 @@ ARBITRAGE BETTING:
 
 By placing bets on both fighters on different bookmakers:
 
-&nbsp; Decimal Odds for [Ilia] at DraftKings = 1 + (100/166) ≈ 1.60 <br>
-&nbsp; Reciprocal of Odds: (1/1.60) ≈ 0.625
+&nbsp; &nbsp; &nbsp; &nbsp; Decimal Odds for [Ilia] at DraftKings = 1 + (100/166) ≈ 1.60 <br>
+&nbsp; &nbsp; &nbsp; &nbsp; Reciprocal of Odds: (1/1.60) ≈ 0.625
 
-&nbsp; Decimal Odds for [Max] at Caesars = 1 + (170/100) = 2.70 <br>
-&nbsp; Reciprocal of Odds: (1/2.70) ≈ 0.370
+&nbsp; &nbsp; &nbsp; &nbsp; Decimal Odds for [Max] at Caesars = 1 + (170/100) = 2.70 <br>
+&nbsp; &nbsp; &nbsp; &nbsp; Reciprocal of Odds: (1/2.70) ≈ 0.370
 
 To find an arbitrage opportunity, we must look for a combination of odds on both fighters where the sum of the reciprocals of the decimal odds is less than 1:
 
-&nbsp; 0.625 + 0.370 = 0.995 
+&nbsp; &nbsp; &nbsp; &nbsp; 0.625 + 0.370 = 0.995 
 
 This is because the total cost of the bets is less than the guaranteed return from one of the outcomes.
 
-&nbsp; • < 1: Indicates an arbitrage opportunity. The total implied probability is under 100%, suggesting that the market has underpriced the combined probability of all possible outcomes, offering a guaranteed profit scenario regardless of the outcome. 
+&nbsp; &nbsp; &nbsp; &nbsp; • < 1: Indicates an arbitrage opportunity. The total implied probability is under 100%, suggesting that the market has underpriced the combined probability of all possible outcomes, offering a guaranteed profit scenario regardless of the outcome. 
 
-&nbsp; • = 1: Implies that the market is perfectly balanced, i.e Payout = Risk
+&nbsp; &nbsp; &nbsp; &nbsp; • = 1: Implies that the market is perfectly balanced, i.e Payout = Risk
 
-&nbsp; • > 1: Implies no arbitrage bet is possible and the bookmakers may have overpricing the combined probability of the outcomes.
+&nbsp; &nbsp; &nbsp; &nbsp; • > 1: Implies no arbitrage bet is possible and the bookmakers may have overpricing the combined probability of the outcomes.
 
 ![image](https://github.com/user-attachments/assets/097323ba-698e-49b7-b97c-2e5612299842)
 
