@@ -36,8 +36,8 @@ By placing bets on both fighters on different bookmakers:
 
 &nbsp; &nbsp; &nbsp; &nbsp; [Max] at Caesars <br>
 &nbsp; &nbsp; &nbsp; &nbsp; Decimal Odds for  = 1 + (170/100) = 2.70 <br>
-&nbsp; &nbsp; &nbsp; &nbsp; Reciprocal of Odds: (1/2.70) ≈ **0.370**
-&nbsp; &nbsp; &nbsp; &nbsp; ______________________________________________
+&nbsp; &nbsp; &nbsp; &nbsp; Reciprocal of Odds: (1/2.70) ≈ **0.370** <br>
+&nbsp; &nbsp; &nbsp; &nbsp; ______________________________________________ <br>
 &nbsp; &nbsp; &nbsp; &nbsp; 0.625 + 0.370 = **0.995**
 
 To find an arbitrage opportunity, we must look for a combination of odds on both fighters where the sum of the reciprocals of the decimal odds is less than 1:
@@ -62,25 +62,25 @@ ________________________________________________________________________________
 &nbsp; &nbsp; &nbsp; &nbsp; Decimal Odds: 1 + (100 / 165) ≈ 1.60 <br>
 &nbsp; &nbsp; &nbsp; &nbsp; Reciprocal of Odds: (1 / 1.60) ≈ **0.625**
 
-&nbsp; &nbsp; &nbsp;[Jesse Stim] at DraftKings <br>
+&nbsp; &nbsp; &nbsp;[Jesse Stirn] at DraftKings <br>
 &nbsp; &nbsp; &nbsp; &nbsp; Decimal Odds for  = 1 + (265/100) ≈ 3.65 <br>
-&nbsp; &nbsp; &nbsp; &nbsp; Reciprocal of Odds: (1/3.65) ≈ **0.274**
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0.625 + 0.317 = **0.942**
+&nbsp; &nbsp; &nbsp; &nbsp; Reciprocal of Odds: (1/3.65) ≈ **0.274** <br>
+&nbsp; &nbsp; &nbsp; &nbsp; ______________________________________________ <br>
+&nbsp; &nbsp; &nbsp; &nbsp; 0.625 + 0.317 = **0.942**
 
 ________________________________________________________________________________________________________________
 
 **EXAMPLE BET:**
 
-Bet **$305.56** on Fighter [Jesse Stim] at Draftkings: <br>
+Bet **$305.56** on Fighter [Jesse Stirn] at Draftkings: <br>
 &nbsp; &nbsp; &nbsp; &nbsp;• Expected Payout: $1,115.28
 
 Bet **$694.44** on Fighter [Jose Perez] at BetMGM: <br>
 &nbsp; &nbsp; &nbsp; &nbsp;• Expected Payout: $1,115.28
 
-&nbsp; &nbsp; &nbsp; &nbsp;Total Investment: $305.56 + $694.44 = **$1,000**
-&nbsp; &nbsp; &nbsp; &nbsp;Total Payout in Either Case: **$1,115.28**
-&nbsp; &nbsp; &nbsp; &nbsp;__________________________________________________
+&nbsp; &nbsp; &nbsp; &nbsp;Total Investment: $305.56 + $694.44 = **$1,000** <br>
+&nbsp; &nbsp; &nbsp; &nbsp;Total Payout in Either Case: **$1,115.28** <br>
+&nbsp; &nbsp; &nbsp; &nbsp;__________________________________________________ <br>
 &nbsp; &nbsp; &nbsp; &nbsp;Total Profit: $1,115.28 - $1,000 = **$115.28**
 
 
