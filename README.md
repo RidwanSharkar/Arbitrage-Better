@@ -28,22 +28,20 @@ ________________________________________________________________________________
 
 By placing bets on both fighters on different bookmakers:
 
-&nbsp; &nbsp; &nbsp;[Ilia] at DraftKings <br>
+&nbsp; &nbsp; &nbsp; &nbsp; [Ilia] at DraftKings <br>
 &nbsp; &nbsp; &nbsp; &nbsp; Decimal Odds for  = 1 + (100/166) ≈ 1.60 <br>
 &nbsp; &nbsp; &nbsp; &nbsp; Reciprocal of Odds: (1/1.60) ≈ **0.625**
 
-&nbsp; &nbsp; &nbsp;[Max] at Caesars
+&nbsp; &nbsp; &nbsp; &nbsp; [Max] at Caesars <br>
 &nbsp; &nbsp; &nbsp; &nbsp; Decimal Odds for  = 1 + (170/100) = 2.70 <br>
 &nbsp; &nbsp; &nbsp; &nbsp; Reciprocal of Odds: (1/2.70) ≈ **0.370**
 
+&nbsp; &nbsp; &nbsp; &nbsp; 0.625 + 0.370 = **0.995**
+
 To find an arbitrage opportunity, we must look for a combination of odds on both fighters where the sum of the reciprocals of the decimal odds is less than 1:
 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0.625 + 0.370 = **0.995**
-
-• **[< 1]**: Indicates an arbitrage opportunity. The total implied probability is under 100%, suggesting that the market has underpriced the combined &nbsp;probability of all possible outcomes, offering a guaranteed profit scenario regardless of the outcome of the fight. 
-
-• **[= 1]**: Implies that the market is perfectly balanced, i.e Payout = Risk.
-
+• **[< 1]**: Indicates an arbitrage opportunity. The total implied probability is under 100%, suggesting that the market has underpriced the combined &nbsp;probability of all possible outcomes, offering a guaranteed profit scenario regardless of the outcome of the fight. <br>
+• **[= 1]**: Implies that the market is perfectly balanced, i.e Payout = Risk.<br>
 • **[> 1]**: Implies no arbitrage bet is possible and the bookmakers may have overpricing the combined probability of the outcomes.
 
 ________________________________________________________________________________________________________________
