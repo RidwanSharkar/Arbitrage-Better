@@ -42,7 +42,7 @@ By placing bets on both fighters on different bookmakers:
 
 To find an arbitrage opportunity, we must look for a combination of odds on both fighters where the sum of the reciprocals of the decimal odds is less than 1:
 
-• **[< 1]** Indicates an arbitrage opportunity. The total implied probability is under 100%, suggesting that the market has underpriced the combined &nbsp; &nbsp; probability of all possible outcomes, offering a guaranteed profit scenario regardless of the outcome of the fight.
+• **[< 1]** Indicates an arbitrage opportunity. The total implied probability is under 100%, suggesting that the market has underpriced the combined probability of all possible outcomes, offering a guaranteed profit scenario regardless of the outcome of the fight.
 
 • **[= 1]** Implies that the market is perfectly balanced, i.e Payout = Risk.
 
@@ -52,17 +52,17 @@ ________________________________________________________________________________
 
 ![image](https://github.com/user-attachments/assets/097323ba-698e-49b7-b97c-2e5612299842)
 
-However, the arbitrage opportunity disappears within hours as DraftKings' odds for [Ilia] rise to -175 to close this gap. Bookmakers collaborate to resolve any arbitrage betting opportunities, allowing only small windows of time to capitalize. This is the reasoning behind why scraping live odds is scheduled for every 15 minutes and primed to alert subscribers via email when a current arbitrage bet exists.  
+However, the arbitrage opportunity disappears within hours as DraftKings' odds for [Ilia] rise to -175 to close this gap. Bookmakers collaborate to resolve any arbitrage betting opportunities, allowing only small windows of time to capitalize. To combat this, scraping live odds is scheduled for every 15 minutes and primed to alert subscribers via email when a current arbitrage bet exists.  
 
 ________________________________________________________________________________________________________________
 
 ![Arbitrage Example 2](https://github.com/user-attachments/assets/e5ec43fc-3866-47a9-a2e0-faa94cbb624f)
 
-&nbsp; &nbsp; &nbsp;[Jose Perez] at BetMGM <br>
+&nbsp; &nbsp; &nbsp; &nbsp; [Jose Perez] at BetMGM <br>
 &nbsp; &nbsp; &nbsp; &nbsp; Decimal Odds: 1 + (100 / 165) ≈ 1.60 <br>
 &nbsp; &nbsp; &nbsp; &nbsp; Reciprocal of Odds: (1 / 1.60) ≈ **0.625**
 
-&nbsp; &nbsp; &nbsp;[Jesse Stirn] at DraftKings <br>
+&nbsp; &nbsp; &nbsp; &nbsp; [Jesse Stirn] at DraftKings <br>
 &nbsp; &nbsp; &nbsp; &nbsp; Decimal Odds for  = 1 + (265/100) ≈ 3.65 <br>
 &nbsp; &nbsp; &nbsp; &nbsp; Reciprocal of Odds: (1/3.65) ≈ **0.274** <br>
 &nbsp; &nbsp; &nbsp; &nbsp; ______________________________________________ <br>
@@ -78,14 +78,14 @@ Bet **$305.56** on Fighter [Jesse Stirn] at Draftkings: <br>
 Bet **$694.44** on Fighter [Jose Perez] at BetMGM: <br>
 &nbsp; &nbsp; &nbsp; &nbsp;• Expected Payout: $1,115.28
 
-&nbsp; &nbsp; &nbsp; &nbsp;Total Investment: $305.56 + $694.44 = **$1,000** <br>
-&nbsp; &nbsp; &nbsp; &nbsp;Total Payout in Either Case: **$1,115.28** <br>
-&nbsp; &nbsp; &nbsp; &nbsp;__________________________________________________ <br>
-&nbsp; &nbsp; &nbsp; &nbsp;Total Profit: $1,115.28 - $1,000 = **$115.28**
+&nbsp; &nbsp; &nbsp; &nbsp; Total Investment: $305.56 + $694.44 = **$1,000** <br>
+&nbsp; &nbsp; &nbsp; &nbsp; Total Payout in Either Case: **$1,115.28** <br>
+&nbsp; &nbsp; &nbsp; &nbsp; __________________________________________________ <br>
+&nbsp; &nbsp; &nbsp; &nbsp; Total Profit: $1,115.28 - $1,000 = **$115.28**
 
 
 ________________________________________________________________________________________________________________
-**NOTE: **
+**NOTE:**
 
 Use at your own risk. Arbitrage betting is NOT illegal; however, bookmakers will likely ban you from their betting platform if detected.
 
