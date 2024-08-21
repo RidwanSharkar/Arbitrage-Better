@@ -4,7 +4,9 @@ ________________________________________________________________________________
 
 **OVERVIEW:**
 
-• Arbitrage-Better is a web application that helps users identify and exploit arbitrage betting opportunities in MMA bouts for guaranteed profit. The application scrapes live odds from bookmakers and calculates potential arbitrage bets, highlighting them for the user in real-time. 
+• Arbitrage-Better is a web application that helps users identify and exploit arbitrage betting opportunities in MMA bouts for guaranteed profit. 
+
+• The application scrapes live odds from bookmakers and calculates potential arbitrage bets, highlighting them for the user in real-time. 
 
 • Since an arbitrage bet may only exist for a narrow window of time, scheduled scraping and an email notification service are implemented to notify subscribers when a current arbitrage opportunity exists.
 
