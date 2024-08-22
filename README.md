@@ -85,6 +85,10 @@ Bet **$694.44** on Fighter [Jose Perez] at BetMGM: <br>
 _____________________________________________________________ <br>
 **Total Guaranteed Profit:** $1,115.28 - $1,000 = **$115.28**
 
+________________________________________________________________________________________________________________
+
+![image](https://github.com/user-attachments/assets/46800a8c-291a-4527-8ad8-f591320d5cb8)
+• 24 hours later, the odds for the [Jesse Stirn] vs [Jose Perez] fight have normalized, but another arbitrage opportunity presents itself.
 
 ________________________________________________________________________________________________________________
 **NOTE:**
