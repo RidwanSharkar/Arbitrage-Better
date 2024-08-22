@@ -44,17 +44,17 @@ By placing bets on both fighters on different bookmakers:
 
 To find an arbitrage opportunity, we must look for a combination of odds on both fighters where the sum of the reciprocals of the decimal odds is less than 1:
 
-• **[< 1]** Indicates an arbitrage opportunity. The total implied probability is under 100%, suggesting that the market has underpriced the combined probability of all possible outcomes, offering a guaranteed profit scenario regardless of the outcome of the fight.
+• **[< 1]** Indicates an arbitrage opportunity. The total implied probability is under 100%, suggesting that the market has underpriced the combined probability of all possible outcomes - offering a guaranteed profit scenario regardless of the outcome of the fight.
 
 • **[= 1]** Implies that the market is perfectly balanced, i.e Payout = Risk.
 
-• **[> 1]** Implies no arbitrage bet is possible and the bookmakers may have overpricing the combined probability of the outcomes.
+• **[> 1]** Implies no arbitrage bet is possible and the bookmakers may be overpricing the combined probability of the outcomes.
 
 ________________________________________________________________________________________________________________
 
 ![image](https://github.com/user-attachments/assets/097323ba-698e-49b7-b97c-2e5612299842)
 
-However, the arbitrage opportunity disappears within hours as DraftKings' odds for [Ilia] rise to -175 to close this gap. Bookmakers collaborate to resolve any arbitrage betting opportunities, allowing only small windows of time to capitalize. To combat this, scraping live odds is scheduled for every 15 minutes and primed to alert subscribers via email when a current arbitrage bet exists.  
+However, this arbitrage opportunity disappears within hours, as DraftKings' odds for [Ilia] rise to -175 to close this gap. Bookmakers collaborate to resolve wide odds discrepencies, allowing only small windows of time to capitalize. To combat this, scraping live odds is scheduled for every 15 minutes, priming the app to alert subscribers via email when a current arbitrage bet exists.  
 
 ________________________________________________________________________________________________________________
 
