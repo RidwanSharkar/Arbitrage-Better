@@ -54,7 +54,7 @@ ________________________________________________________________________________
 
 ![image](https://github.com/user-attachments/assets/097323ba-698e-49b7-b97c-2e5612299842)
 
-However, this arbitrage opportunity disappears within hours, as DraftKings' odds for [Ilia] rise to -175 to close this gap. Bookmakers collaborate to resolve wide discrepencies in odds, yielding only small windows of time to capitalize. Consequently, the closer the date to the actual bout, the less likely an arbitrage potential exists. To combat this, scraping live odds is scheduled for every 15 minutes, priming the app to alert subscribers via email when a current arbitrage opportunity exists, from up to months in advance.  
+However, this arbitrage opportunity disappears within hours, as DraftKings' odds for [Ilia] rise to -175 to close this gap. Bookmakers collaborate to resolve wide discrepencies in odds, yielding only small windows of time to capitalize. Consequently, the closer the date to the actual bout, the less likely an arbitrage bet exists. To combat this, scraping live odds is scheduled for every 15 minutes, priming the app to alert subscribers via email when a current arbitrage opportunity exists, from up to months in advance.  
 
 ________________________________________________________________________________________________________________
 
