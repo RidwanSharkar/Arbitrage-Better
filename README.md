@@ -39,7 +39,7 @@ By placing bets on both fighters on different bookmakers:
 &nbsp; &nbsp; &nbsp; &nbsp; [Max] at Caesars <br>
 &nbsp; &nbsp; &nbsp; &nbsp; Decimal Odds: 1 + (170/100) = 2.70 <br>
 &nbsp; &nbsp; &nbsp; &nbsp; Reciprocal: (1/2.70) ≈ **0.370** <br>
-&nbsp; &nbsp; &nbsp; &nbsp; ______________________________________________ <br>
+&nbsp; &nbsp; &nbsp; &nbsp; ______________________________________ <br>
 &nbsp; &nbsp; &nbsp; &nbsp; 0.625 + 0.370 = **0.995**
 
 To find an arbitrage opportunity, we must look for a combination of odds on both fighters where the sum of the reciprocals of the decimal odds is less than 1:
@@ -67,7 +67,7 @@ ________________________________________________________________________________
 &nbsp; &nbsp; &nbsp; &nbsp; [Jesse Stirn] at DraftKings <br>
 &nbsp; &nbsp; &nbsp; &nbsp; Decimal Odds: 1 + (265/100) ≈ 3.65 <br>
 &nbsp; &nbsp; &nbsp; &nbsp; Reciprocal: (1/3.65) ≈ **0.274** <br>
-&nbsp; &nbsp; &nbsp; &nbsp; ______________________________________________ <br>
+&nbsp; &nbsp; &nbsp; &nbsp; ______________________________________ <br>
 &nbsp; &nbsp; &nbsp; &nbsp; 0.625 + 0.317 = **0.942**
 
 ________________________________________________________________________________________________________________
@@ -82,7 +82,7 @@ Bet **$694.44** on Fighter [Jose Perez] at BetMGM: <br>
 
 **Total Investment:** $305.56 + $694.44 = **$1,000** <br>
 **Total Payout in Either Case:** **$1,115.28** <br>
-_____________________________________________________________ <br>
+_____________________________________________________ <br>
 **Total Guaranteed Profit:** $1,115.28 - $1,000 = **$115.28**
 
 ________________________________________________________________________________________________________________
