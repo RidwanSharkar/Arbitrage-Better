@@ -86,11 +86,6 @@ ______________________________________ <br>
 **Total Guaranteed Profit:** $1,115.28 - $1,000 = **$115.28**
 
 ________________________________________________________________________________________________________________
-
-![image](https://github.com/user-attachments/assets/46800a8c-291a-4527-8ad8-f591320d5cb8)<br>
-• 24 hours later, the odds for the [Jesse Stirn] vs [Jose Perez] fight have normalized, but another arbitrage opportunity presents itself.
-
-________________________________________________________________________________________________________________
 **NOTE:**
 
 Use at your own risk. Arbitrage betting is NOT illegal; however, bookmakers will likely ban you from their betting platform if detected.
