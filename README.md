@@ -77,7 +77,7 @@ Bet **$694.44** on Fighter [Jose Perez] at BetMGM: <br>
 
 **Total Investment:** $305.56 + $694.44 = **$1,000** <br>
 **Total Payout in Either Case:** **$1,115.28** <br>
-______________________________________ <br>
+_____________________________________________________ <br>
 **Total Guaranteed Profit:** $1,115.28 - $1,000 = **$115.28**
 
 
@@ -86,7 +86,7 @@ ______________________________________ <br>
 Use at your own risk. Arbitrage betting is NOT illegal; however, bookmakers will likely ban you from their betting platform if detected.
 
 
-**TECH STACK:**
+## Tech Stack:
 
 **Frontend:** Angular, TypeScript
 
