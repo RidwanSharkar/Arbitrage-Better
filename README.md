@@ -1,7 +1,7 @@
 
 # MMA Arbitrage Betting App
 
-## Overview
+## Overview:
 
 • Arbitrage Better is a web application that helps users identify and exploit arbitrage betting opportunities in MMA bouts for guaranteed profit. 
 
