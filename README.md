@@ -1,8 +1,7 @@
 
-**MMA Arbitrage Betting App**
-________________________________________________________________________________________________________________
+# MMA Arbitrage Betting App
 
-**OVERVIEW:**
+## Overview
 
 • Arbitrage-Better is a web application that helps users identify and exploit arbitrage betting opportunities in MMA bouts for guaranteed profit. 
 
@@ -10,12 +9,10 @@ ________________________________________________________________________________
 
 • Since an arbitrage bet may only exist for a narrow window of time, scheduled scraping and an email notification service are implemented to notify subscribers when a current arbitrage opportunity exists.
 
-________________________________________________________________________________________________________________
 
 ![Homepage1](https://github.com/user-attachments/assets/09e9595e-9688-4e34-8965-edc380edf3ef)
 
-________________________________________________________________________________________________________________
-**UNDERSTANDING ODDS:**
+## Understanding Odds
 
 **(+140) Odds:** <br>
 &nbsp; &nbsp; &nbsp; &nbsp; • if you bet $100, you will win $140 -> Total Return: $240 <br>
@@ -25,8 +22,7 @@ ________________________________________________________________________________
 &nbsp; &nbsp; &nbsp; &nbsp; • you need to bet $166 to win $100 -> Total Return: $266 <br>
 &nbsp; &nbsp; &nbsp; &nbsp; • The (-) indicates the fighter is the **Favorite**.
 
-________________________________________________________________________________________________________________
-**ARBITRAGE BETTING:**
+## Arbitrage Betting:
 
 ![image](https://github.com/user-attachments/assets/265fc27e-8e24-41cf-8821-596a05d621bb)
 
@@ -50,13 +46,12 @@ To find an arbitrage opportunity, we must look for a combination of odds on both
 
 • **[> 1]** Implies no arbitrage bet is possible and the bookmakers may be overpricing the combined probability of the outcomes.
 
-________________________________________________________________________________________________________________
 
 ![image](https://github.com/user-attachments/assets/097323ba-698e-49b7-b97c-2e5612299842)
 
 However, this arbitrage opportunity disappears within hours, as DraftKings' odds for [Ilia] rise to -175 to close this gap. Bookmakers collaborate to resolve wide discrepencies in odds, yielding only small windows of time to capitalize. Consequently, the closer the date to the actual bout, the less likely an arbitrage bet exists. To combat this, scraping live odds is scheduled for every 15 minutes, priming the app to alert subscribers via email when a current arbitrage opportunity exists, from up to weeks in advance.  
 
-________________________________________________________________________________________________________________
+
 
 ![Arbitrage Example 2](https://github.com/user-attachments/assets/e5ec43fc-3866-47a9-a2e0-faa94cbb624f)
 
@@ -70,9 +65,9 @@ ________________________________________________________________________________
 &nbsp; &nbsp; &nbsp; &nbsp; ______________________________________ <br>
 &nbsp; &nbsp; &nbsp; &nbsp; 0.625 + 0.317 = **0.942**
 
-________________________________________________________________________________________________________________
 
-**EXAMPLE BET:**
+
+## Example Bet: 
 
 Bet **$305.56** on Fighter [Jesse Stirn] at Draftkings: <br>
 &nbsp; &nbsp; &nbsp; &nbsp;• Expected Payout: $1,115.28
@@ -85,12 +80,12 @@ Bet **$694.44** on Fighter [Jose Perez] at BetMGM: <br>
 ______________________________________ <br>
 **Total Guaranteed Profit:** $1,115.28 - $1,000 = **$115.28**
 
-________________________________________________________________________________________________________________
-**NOTE:**
+
+## Note:
 
 Use at your own risk. Arbitrage betting is NOT illegal; however, bookmakers will likely ban you from their betting platform if detected.
 
-________________________________________________________________________________________________________________
+
 **TECH STACK:**
 
 **Frontend:** Angular, TypeScript
