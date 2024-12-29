@@ -1,9 +1,8 @@
 
 # MMA Arbitrage Betting App
+Arbitrage Better is a web application that helps users identify and exploit arbitrage betting opportunities in MMA bouts for guaranteed profit. 
 
 ## Overview:
-
-• Arbitrage Better is a web application that helps users identify and exploit arbitrage betting opportunities in MMA bouts for guaranteed profit. 
 
 • The application scrapes live odds from bookmakers and calculates potential arbitrage bets, highlighting them for the user in real-time. 
 
@@ -11,6 +10,8 @@
 
 
 ![Homepage1](https://github.com/user-attachments/assets/09e9595e-9688-4e34-8965-edc380edf3ef)
+
+---
 
 ## Understanding Odds:
 
@@ -21,6 +22,8 @@
 **(-166) Odds:** <br>
 &nbsp; &nbsp; &nbsp; &nbsp; • you need to bet $166 to win $100 -> Total Return: $266 <br>
 &nbsp; &nbsp; &nbsp; &nbsp; • The (-) indicates the fighter is the **Favorite**.
+
+---
 
 ## Arbitrage Betting:
 
@@ -65,7 +68,7 @@ However, this arbitrage opportunity disappears within hours, as DraftKings' odds
 &nbsp; &nbsp; &nbsp; &nbsp; ______________________________________ <br>
 &nbsp; &nbsp; &nbsp; &nbsp; 0.625 + 0.317 = **0.942**
 
-
+---
 
 ## Example Bet: 
 
@@ -80,6 +83,7 @@ Bet **$694.44** on Fighter [Jose Perez] at BetMGM: <br>
 _____________________________________________________ <br>
 **Total Guaranteed Profit:** $1,115.28 - $1,000 = **$115.28**
 
+---
 
 ## Note:
 
