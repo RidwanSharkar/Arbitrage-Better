@@ -30,7 +30,7 @@ The application continuously monitors and analyzes betting odds from **6 major s
 - Client-Server Architecture
 - CORS-Enabled Cross-Origin Communication
 
-### ⚡ Key Features:
+### 🔑 Key Features:
 
 **1. Live Odds Aggregation**
 - Real-time web scraping of odds from multiple bookmakers
