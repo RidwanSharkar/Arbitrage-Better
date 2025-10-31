@@ -31,3 +31,35 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Angular ###
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+frontend/tmp/
+frontend/.cache/
+
+### Logs ###
+*.log
+logs/
+*.log.*
+
+### Operating System ###
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+### ChromeDriver/Selenium Cache ###
+.chromedriver/
+selenium/
+*.crx
+*.zip
+
+### Environment Variables ###
+.env
+.env.local
+.env.*.local
